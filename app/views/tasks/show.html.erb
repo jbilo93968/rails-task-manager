@@ -1,0 +1,11 @@
+<p> Name: <%= @task.name %></p>
+<p> Date of creation: <%= @task.created_at %></p>
+<p> Description: <%= @task.description %></p>
+<p> Deadine: <%= @task.deadline %></p>
+<%= link_to "Revenir à la liste des tâches", tasks_path %>
+<%= link_to "Modifier la tâche", edit_task_path(@task) %>
+<%= link_to "Supprimer la tâche", task_path(@task),
+                                  method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
+
+
