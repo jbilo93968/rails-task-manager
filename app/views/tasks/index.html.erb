@@ -1,7 +1,7 @@
 <h2>TO DO LIST</h2>
 
 <% @tasks.each do |task| %>
-  <p> Name: <%= task.name %>
+  <p> <%= task.name %>
   <%= link_to "Aller voir ma tâche", task_path(task) %></p>
 <% end %>
 <%= link_to "Ajouter une nouvelle tâche", new_task_path(@task) %>
